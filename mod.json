@@ -1,16 +1,15 @@
 {
-    "geode": "3.0.0",
-    "id": "zvext.vox_menu",
-    "version": "1.0.0",
-    "name": "Vexta Ohyeaa Client",
-    "developer": "Zvext",
-    "description": "Premium client built to override Mega Hack.",
-    "dependencies": [
-        {
-            "id": "geode.loader",
-            "version": ">=3.0.0",
-            "importance": "required"
-        }
-    ],
-    "binary": "zvext.vox_menu"
+  "geode": "3.0.0",
+  "id": "zvext.vox_menu",
+  "version": "1.0.0",
+  "name": "Vexta Ohyeaa Client",
+  "developer": "Zvext",
+  "description": "Premium iOS cheat suite built to override Mega Hack on iPhone.",
+  "dependencies": [
+    {
+      "id": "geode.loader",
+      "version": ">=3.0.0",
+      "importance": "required"
+    }
+  ]
 }
