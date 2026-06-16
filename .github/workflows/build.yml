@@ -1,1 +1,2 @@
-name:%20Build%20Geode%20Mod%0Aon%3A%20%5Bpush,%20workflow_dispatch%5D%0Ajobs%3A%0A%20%20build%3A%0A%20%20%20%20runs-on%3A%20windows-latest%0A%20%20%20%20steps%3A%0A%20%20%20%20%20%20-%20uses%3A%20actions/checkout@v4%0A%20%20%20%20%20%20-%20name:%20Build%20Mod%0A%20%20%20%20%20%20%20%20uses:%20geode-sdk/build-geode-mod@main%0A
+name:%20Build%20Geode%20Mod%0Aon%3A%20%5Bpush,%20workflow_dispatch%5D%0Ajobs%3A%0A%20%20build%3A%0A%20%20%20%20runs-on%3A%20windows-latest%0A%20%20%20%20steps%3A%0A%20%20%20%20%20%20-%20uses%3A%20actions/checkout@v4%0A%20%20%20%20%20%20-%20name:%20Build%20Mod%0A%20%20%20%20%20%20%20%20uses:%20geode-sdk/build-geode-mod@main%
+
