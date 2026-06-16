@@ -29,7 +29,7 @@ class $modify(VOXPlayer, PlayerObject) {
 // Clean UI Layout Menu
 class $modify(VOXVisualMenu, MenuLayer) {
 
-    // 1. FUNCTIONS PLACED AT THE TOP SO THE BUTTONS CAN SEE THEM
+    // Button Functions defined perfectly inside the class
     void onToggleNoclip(CCObject* sender) {
         g_noclipActive = !g_noclipActive;
         auto label = static_cast<CCLabelBMFont*>(static_cast<CCMenuItemSpriteExtra*>(sender)->getChildren()->objectAtIndex(0));
@@ -50,7 +50,6 @@ class $modify(VOXVisualMenu, MenuLayer) {
         }
     }
 
-    // 2. THE INITIALIZATION LAYER BELOW THE FUNCTIONS
     bool init() {
         if (!MenuLayer::init()) return false;
 
@@ -58,17 +57,17 @@ class $modify(VOXVisualMenu, MenuLayer) {
         auto menuContainer = CCMenu::create();
         menuContainer->setPosition({winSize.width / 2, winSize.height / 2});
 
-        // Noclip Button Layout
+        // 1. Noclip Button Layout (Updated to goldFont.fnt)
         auto noclipBtn = CCMenuItemSpriteExtra::create(
-            CCLabelBMFont::create("Noclip [Active]", "bigFont.fnt"),
+            CCLabelBMFont::create("Noclip [Active]", "goldFont.fnt"),
             this, menu_selector(VOXVisualMenu::onToggleNoclip)
         );
         noclipBtn->setPosition({0, 30});
         menuContainer->addChild(noclipBtn);
 
-        // Speed Button Layout
+        // 2. Speed Button Layout (Updated to goldFont.fnt)
         auto speedBtn = CCMenuItemSpriteExtra::create(
-            CCLabelBMFont::create("Speedhack: 1.0x", "bigFont.fnt"),
+            CCLabelBMFont::create("Speedhack: 1.0x", "goldFont.fnt"),
             this, menu_selector(VOXVisualMenu::onToggleSpeed)
         );
         speedBtn->setPosition({0, -30});
@@ -78,4 +77,3 @@ class $modify(VOXVisualMenu, MenuLayer) {
         return true;
     }
 };
-
