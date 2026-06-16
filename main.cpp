@@ -9,8 +9,6 @@ using namespace geode::prelude;
 bool g_noclipActive = true;
 bool g_botRecording = false;
 bool g_botReplaying = false;
-bool g_layoutModeActive = false;
-float g_customTargetFPS = 240.0f; 
 float g_gameSpeedMultiplier = 1.0f;
 
 struct PlayerInputEvent {
@@ -63,14 +61,14 @@ class $modify(VOXVisualMenu, MenuLayer) {
             CCLabelBMFont::create("Noclip [Active]", "bigFont.fnt"),
             this, menu_selector(VOXVisualMenu::onToggleNoclip)
         );
-        noclipBtn->setPosition({0, 60});
+        noclipBtn->setPosition({0, 40});
         menuContainer->addChild(noclipBtn);
 
         auto speedBtn = CCMenuItemSpriteExtra::create(
             CCLabelBMFont::create("Speedhack: 1.0x", "bigFont.fnt"),
             this, menu_selector(VOXVisualMenu::onToggleSpeed)
         );
-        speedBtn->setPosition({0, -100});
+        speedBtn->setPosition({0, -40});
         menuContainer->addChild(speedBtn);
         this->addChild(menuContainer, 100); 
         return true;
