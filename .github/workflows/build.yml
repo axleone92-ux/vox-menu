@@ -1,13 +1,17 @@
 name: Build Geode Mod
-on: [push, workflow_dispatch]
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
+    name: Build Mod
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Build Mod
-        uses: geode-sdk/build-geode-mod@main
-        with:
-          cache: false
+    - uses: actions/checkout@v4
+
+    - name: Build Geode Mod
+      uses: geode-sdk/build-geode-mod@main
