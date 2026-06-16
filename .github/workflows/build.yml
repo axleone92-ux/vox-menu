@@ -13,8 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Geode SDK
-      uses: geode-sdk/setup-geode@main
-
     - name: Build Geode Mod
       uses: geode-sdk/build-geode-mod@main
